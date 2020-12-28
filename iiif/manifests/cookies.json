@@ -1,0 +1,183 @@
+{
+    "@context": "http://iiif.io/api/presentation/3/context.json",
+    "id": "/iiif/manifests/cookies",
+    "type": "Manifest",
+    "label": { "en": [ "Baking Chocolate Chip Cookies" ] },
+    "summary": { "en": [ "" ] },
+    "metadata": [
+      {
+        "label": { "en": [ "Date Issued" ] },
+        "value": { "en": [ "2020" ] }
+      },
+      {
+        "label": { "en": [ "Publisher" ] },
+        "value": { "en": [ "What is Jeff Baking?" ] }
+      }
+    ],
+    "provider": [
+      {
+        "id": "https://whatisjeffbaking.com",
+        "type": "Agent", 
+        "label": { "en": [ "WIJB Dot Com"]},
+        "logo": [
+          {
+            "id": "https://www.whatisjeffbaking.com/images/DSC_3545/full/256,/0/default.jpg",
+            "type": "Image", 
+            "format": "image/jpeg",
+            "height": 170,
+            "width": 256
+          }
+        ]
+      }
+    ],
+    "thumbnail": [
+      {
+        "id": "https://www.whatisjeffbaking.com/images/DSC_3545/full/256,/0/default.jpg",
+        "type": "Image", 
+        "format": "image/jpeg",
+        "height": 170,
+        "width": 256
+      }
+    ],
+    "items": [
+      {
+        "id": "/iiif/manifests/cookies/canvas/1",
+        "type": "Canvas",
+        "label": { "en": [ "Timelapse of baking" ]},
+        "width": 1920,
+        "height": 1080,
+        "duration": 28.0,
+        "items": [
+          {
+            "id": "/iiif/manifests/cookies/canvas/1/annotation_page/1",
+            "type": "AnnotationPage",
+            "items": [
+              {
+                "id": "/iiif/manifests/cookies/canvas/1/annotation_page/1/annotation/1",
+                "type": "Annotation",
+                "motivation": "painting",
+                "target": "/iiif/manifests/cookies/canvas/1#t=0",
+                "body": {
+                  "id": "https://wijb.s3.amazonaws.com/videos/chocolate-chip-cookies/cookies.mp4",
+                  "type": "Video",
+                  "format": "video/mp4",
+                  "height": 1080,
+                  "width": 1920,
+                  "duration": 28.0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "/iiif/manifests/cookies/canvas/2",
+        "type": "Canvas",
+        "label": { "en": [ "Mixing in the flour and chocolate" ]},
+        "width": 1920,
+        "height": 1080,
+        "duration": 127.0,
+        "items": [
+          {
+            "id": "/iiif/manifests/cookies/canvas/2/annotation_page/1",
+            "type": "AnnotationPage",
+            "items": [
+              {
+                "id": "/iiif/manifests/cookies/canvas/2/annotation_page/1/annotation/1",
+                "type": "Annotation",
+                "motivation": "painting",
+                "target": "/iiif/manifests/cookies/canvas/2#t=0",
+                "body": {
+                  "id": "https://wijb.s3.amazonaws.com/videos/chocolate-chip-cookies/cookie-mixing.mp4",
+                  "type": "Video",
+                  "format": "video/mp4",
+                  "height": 1080,
+                  "width": 1920,
+                  "duration": 127.0
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "/iiif/manifests/cookies/canvas/3",
+        "type": "Canvas",
+        "label": { "en": [ "Whisking the sugar, eggs, and butter" ]},
+        "width": 1080,
+        "height": 1920,
+        "duration": 11.0,
+        "items": [
+          {
+            "id": "/iiif/manifests/cookies/canvas/3/annotation_page/1",
+            "type": "AnnotationPage",
+            "items": [
+              {
+                "id": "/iiif/manifests/cookies/canvas/3/annotation_page/1/annotation/1",
+                "type": "Annotation",
+                "motivation": "painting",
+                "target": "/iiif/manifests/cookies/canvas/3#t=0",
+                "body": {
+                  "id": "https://wijb.s3.amazonaws.com/videos/chocolate-chip-cookies/cookie-whisking.mp4",
+                  "type": "Video",
+                  "format": "video/mp4",
+                  "height": 1920,
+                  "width": 1080,
+                  "duration": 11.0
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "structures": [
+      {
+        "id": "/iiif/manifests/cookies/range/r0",
+        "type": "Range",
+        "label": { "en": [ "Ingredients"] },
+        "items": [] 
+      },
+      {
+        "id": "/iiif/manifests/cookies/range/r1",
+        "type": "Range",
+        "label": { "en": [ "Steps"] },
+        "items": [
+          {
+            "id": "/iiif/manifests/cookies/range/r2",
+            "type": "Range",
+            "label": { "en": [ "Whisking the sugar, eggs, and butter" ]},
+            "items": [
+              {
+                "id": "/iiif/manifests/cookies/canvas/3",
+                "type": "Canvas"
+              }
+            ]
+          },
+          {
+            "id": "/iiif/manifests/cookies/range/r3",
+            "type": "Range",
+            "label": { "en": [ "Mixing in the flour and chocolate" ]},
+            "items": [
+              {
+                "id": "/iiif/manifests/cookies/canvas/1",
+                "type": "Canvas"
+              }
+            ]
+          },
+          {
+            "id": "/iiif/manifests/cookies/range/r4",
+            "type": "Range",
+            "label": { "en": [ "Timelapse of baking" ] },
+            "items": [
+              {
+                "id": "/iiif/manifests/cookies/canvas/2",
+                "type": "Canvas"
+              }
+            ]
+          }
+        ] 
+      }      
+
+    ]
+}
