@@ -194,6 +194,8 @@
       <p class="lead">
         <h4>This is my archive of baking events.</h4>
       </p>
+
+      <input type="text" id="searchbox" class="form-control form-control-lg mb-4" onkeyup="search()" placeholder="Search the archive ...">
       
       <h5>2024</h5>
       <ul>
@@ -841,5 +843,28 @@
         </a></span>. Bake on. 
     </span></p>
     </footer>
+
+    <script>
+      function search() {
+        let input = document.getElementById('searchbox');
+        let filter = input.value.toUpperCase();
+        let elsToSearch = document.getElementsByTagName('li');
+        let el;
+        let txtValue;        
+      
+        // Loop through all list items, and hide those who don't match the search query
+        for (let i = 0; i < elsToSearch.length; i++) {
+          el = elsToSearch[i];
+
+          txtValue = el.textContent || el.innerText;
+          
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            el.style.display = "";
+          } else {
+            el.style.display = "none";
+          }
+        }
+      }
+    </script>
   </body>
 </html>
