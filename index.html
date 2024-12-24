@@ -195,7 +195,7 @@
         <h4>This is my archive of baking events.</h4>
       </p>
 
-      <input type="text" id="searchbox" class="form-control form-control-lg mb-4" onkeyup="search()" placeholder="Search the archive ...">
+      <input type="search" id="searchbox" class="form-control form-control-lg mb-4" onkeyup="search()" placeholder="Search the archive ...">
       
       <h5>2024</h5>
       <ul>
@@ -846,6 +846,13 @@
     </footer>
 
     <script>
+      let input = document.getElementById('searchbox');
+      input.addEventListener("search", () => {
+        if (!input.value.length) {
+          resetLists();
+        }
+      });
+
       function search() {
         let input = document.getElementById('searchbox');
         let filter = input.value.toUpperCase();
@@ -864,6 +871,14 @@
           } else {
             el.style.display = "none";
           }
+        }
+      }
+
+      function resetLists() {
+        let elsToSearch = document.getElementsByTagName('li');
+        for (let i = 0; i < elsToSearch.length; i++) {
+          el = elsToSearch[i];
+          el.style.display = "";        
         }
       }
     </script>
